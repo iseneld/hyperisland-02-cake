@@ -1,0 +1,134 @@
+[
+    {
+        "name":"Chocolate Day",
+        "date":"October 28th",
+        "information":"On October 28th we celebrate chocolate with joy. 
+        Who can blame us given that chocolate can be eaten as it is, 
+        used for desserts, sweets and as a spice in dishes. So enjoy this 
+        day to the fullest.",
+        "header":"images/chocolate.jpg"
+    },
+    {
+        "name":"Chocolate cake day",
+        "date":"November 7th",
+        "information":"The Chocolate cake day is celebrated on the same date every year. 
+        The Chocolate cake day is one of the holidays that is lesser known but has in recent 
+        years increased enormously in popularity. The Chocolate cake is a soft cake with a 
+        taste of chocolate that should preferably be served lukewarm. 
+        It is usually consumed together with whipped cream. Ice cream can also be served.",
+        "header":"images/kladdkaka.jpeg"
+
+    },
+    {
+        "name":"Baklava day",
+        "date":"November 17th",
+        "information":"Each year on November 17th, National Baklava Day fills the kitchen 
+        with a sweet and flaky pastry that’s loved by many. Baklava is a sweet dessert 
+        that gives layers of texture and flavor between sheets of filo pastry filled 
+        with chopped nuts and drizzled with syrup or honey.",
+        "header":"images/baklava.jpg"
+
+    },
+    {
+        "name":"Cake day",
+        "date":"November 26th",
+        "information":"It's cake day on December 26th. It's a day when you can invite your
+         friends and revel in cakes. Shape, taste, size do not matter. Not even if the
+          cakes are soft, hard, cookies or chocolate cakes.",
+        "header":"images/cake.jpeg"
+
+    },
+    {
+        "name":"French toast day",
+        "date":"November 28th",
+        "information":"No need to wonder about what to make for breakfast on November 28 — 
+        it’s National French Toast Day.  You know — that thick, sweet, savory dish that’s 
+        become a staple of the American breakfast diet. There’s something about the 
+        savory-sweet smell of it, and the anticipation of having it painted with butter 
+        and drizzled with syrup, with a side of breakfast sausage or bacon and a tall 
+        glass of orange juice. The promise of this deliciousness will help to get a person 
+        out of bed on even the worst of days.",
+        "header":"images/frenchtoast.jpg"
+
+    },
+    {
+        "name":"Cookie day",
+        "date":"December 4th",
+        "information":"Cookies are sweet and full of all sorts of delicious goodness, from nuts
+         to fruit to chocolate. They can be either delightfully crumbly or sinfully chewy. 
+        There’s no doubt about it: cookies more than deserve their own day, and that’s why 
+        Cookie Day is celebrated around the world in order to pay tribute to these delicious
+         little treats. So grab some flour, butter, and sugar, and let’s get to celebrating, 
+         shall we?",
+        "header":"images/cookies.jpg"
+
+    },
+    {
+        "name":"Cotton Candy day",
+        "date":"December 7th",
+        "information":"National Cotton Candy Day celebrates the spun sugar treat that delights
+         candy fans of all ages. On December 7th get your favorite flavor of this sweet delight 
+         that dates back to the 1400s. Originally called spun sugar, cotton candy is still a 
+         staple at carnivals, fairs, and the circus. While it may be reminiscent of childhood 
+         days, fairy floss also reminds us of fluffy clouds. Since the heated sugar gets spun 
+         into thin strands of fine sugar and blown into fat puffs twirled onto paper sticks, 
+         it’s a bit like magic.",
+        "header":"images/Cottoncandy.jpg"
+
+    },
+    {
+        "name":"Brownie day",
+        "date":"December 8th",
+        "information":"Each year on December 8th, brownie lovers across the world enjoy one of their 
+        favorite baked goods on Brownie Day. In many places of the world, the chocolate brownie is 
+        a favorite, with the blonde brownie running a close second.  A blonde brownie is made with 
+        brown sugar and no chocolate and is often called a blondie.",
+        "header":"images/Brownie.jpg"
+
+    },
+    {
+        "name":"Ice Cream Day",
+        "date":"December 13th",
+        "information":"Ice Cream is without a doubt the perfect dessert ever devised by man. It’s rich 
+        and creamy, full of the flavors of summer while being made from the cold like the winter, and 
+        is perfect at any time of the year. Ice Cream can be used to make sandwiches or entire cakes, 
+        or just eaten as a scoop all on its own. Ice Cream Day celebrates this delicious treat and 
+        all the varieties it comes in!",
+        "header":"images/ice cream.jpg"
+
+    },
+    {
+        "name":"Cupcake Day",
+        "date":"December 15th",
+        "information":"Swirled with frosting, covered in sprinkles, dipped in ganache, or drizzled 
+        with chocolate, cupcakes are a one-of-a-kind dessert that are whimsically versatile for 
+        any occasion. They have evolved far and wide from just chocolate and vanilla to fulfill 
+        almost all of our dessert dreams and fantasies. Luckily, today is National Cupcake Day, 
+        recognized annually on December 15 to commemorate these compact yet delectable sweets. 
+        Indulge all you want in your favorite cupcake treats today—you’ll probably want seconds. 
+        Actually, make that thirds.",
+        "header":"images/Cupcakes.jpg"
+
+    },
+    {
+        "name":"Pumpkin Pie Day",
+        "date":"December 25th",
+        "information":"On December 25th,  Pumpkin Pie Day dishes up the slice many people are looking 
+        for around the dinner table. As they enjoy time with family or friends, they also take the 
+        opportunity to honor the ever-humble and often favored pumpkin pie. Often eaten during the fall 
+        and winter months and invited to Thanksgiving and Christmas tables, pumpkin pie is a traditional 
+        dessert. The pumpkin itself is a symbol of harvest.",
+        "header":"images/PumpkinPie.jpg"
+
+    }
+
+
+
+
+
+
+
+
+
+
+]
