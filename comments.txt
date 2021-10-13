@@ -1,0 +1,2 @@
+//this file is to leave us some comments //Elina
+//Extra function .prettierrc will structurize your file after you save it. Add "prettier" extention. Watch this to set it up if u wanna use it        https://www.youtube.com/watch?v=Gmz27agvLYg&ab_channel=CodeWizard       //Elina
