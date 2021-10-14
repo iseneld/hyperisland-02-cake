@@ -1,14 +1,10 @@
 // Loop the JSON, output 5 items.
 // Function: Convert date in JSON to proper format date().
 // Function: Compares above date to current date.
-// Function: Convert resulting ms to days.
-// Function: Convert resulting ms to hours.
-// Function: Convert resulting ms to minutes.
-// Function: Convert resulting ms to seconds.
 
 
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+var countDownDate = new Date("Oct 14, 2022 11:48:30").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -26,30 +22,27 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  document.querySelector("body").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
 
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.querySelector("body").innerHTML = "Yay! Today's the day!";
   }
 }, 1000);
 
+let test2 = new Date("November 7 2021");
+console.log("Test 2: " + test2)
 
 // CHECK LATER CHECK LATER CHECK LATER CHECK LATER CHECK LATER CHECK LATER CHECK LATER CHECK LATER CHECK LATER CHECK LATER CHECK LATER 
-
-function loopHolidays(json) {
-        for (let i = 0; i < json.length; i++) {
-        createThumbnail(json[i]); // Funcion call >>
-};
 
 function getHolidays() {
   fetch("../data/holidays.json")
     .then((response) => response.json())
-    .then((data) => {
-      for (let i = 0; i < data.length; i++) {
-        loopHolidays(data[i]); // Function call >>
-      }
-    });
+    // .then((data) => {
+    //   for (let i = 0; i < data.length; i++) {
+    //     loopHolidays(data[i]); // Function call >>
+    //   }
+    // });
 }
