@@ -3,7 +3,7 @@
   margin: 0;
 }
 
-body main {
+main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,7 +17,7 @@ body main {
   width: 100%;
 }
 
-body main .container {
+main .container {
   background-color: #eddcd2;
   display: -ms-grid;
   display: grid;
@@ -26,21 +26,21 @@ body main .container {
   grid-gap: 5em;
 }
 
-body main .container .mainCard h1 {
+main .container .mainCard h1 {
   font-family: "Pacifico", cursive;
 }
 
-body main .container .mainCard h4 {
+main .container .mainCard h4 {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
 }
 
-body main .container .chevron {
+main .container .chevron {
   width: 40px;
   height: 40px;
 }
 
-body main .container .cards {
+main .container .cards {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[4];
