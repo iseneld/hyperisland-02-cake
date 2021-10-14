@@ -20,6 +20,11 @@ main {
  
   grid-area: 2 / 2 / 5 / 3;
   height: 100vh;
+
+  p{
+    margin: 0px;
+    padding: 0;
+  }
   
   
   .main__card {
@@ -45,6 +50,7 @@ main {
       min-height: 30px;
       width: 100%;
     }
+
   }
 
   ol{
@@ -53,6 +59,7 @@ main {
     
     li{
       color: $color1;
+      font-family: $fontDates;
       display:flex;
       justify-content: space-between;
       align-items: center;
@@ -61,8 +68,7 @@ main {
       background-color: #EDDCD2;
       margin: 20px;
       border-radius: 8px;
-      padding-left: 10px;
-      padding-right: 10px;
+      padding: 10px;
     }
   }
 
