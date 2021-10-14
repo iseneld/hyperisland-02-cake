@@ -5,38 +5,31 @@
   margin: 0;
 }
 
-main {   
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100%;
-  .container {
-    background-color: $color3;
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 5em;
+body{
+display: grid;
+grid-template-columns: 0.8fr 1fr 0.8fr;
+grid-template-rows: 0.5fr 2fr 5fr 1fr;
+grid-column-gap: 2px;
+grid-row-gap: 2px;
+}
 
-    .mainCard {
-      h1 {
-        font-family: $fontNames;
-      }
-      h4 {
-        font-family: $fontDates;
-        font-weight: 400;
-      }
+main {   
+  grid-area: 2 / 2 / 5 / 3;
+  height: 100vh;
+  width: 80%;
+
+  .mainCard {
+    h1 {
+      font-family: $fontNames;
     }
+    h4 {
+      font-family: $fontDates;
+      font-weight: 400;
+    }
+  }
 
     .chevron {
       width: 40px;
       height: 40px;
     }
-
-    .cards {
-      display: grid;
-      grid-template-rows: repeat(4, 1fr);
-      grid-gap: 2em;
-      grid-auto-rows: minmax(60px, auto);
-    }
-  }
 }
