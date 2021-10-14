@@ -22,8 +22,7 @@ function printHolidays(data) {
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor(
-      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
@@ -40,6 +39,13 @@ function printHolidays(data) {
       document.querySelector("ol li:first-child").innerHTML = "Yay! Today's the day!";
     }
   }, 1000);
+
+  //This will remove the outdated date and replace with new one
+  //if (day == 0 && hour == -23 && min == -59 && sec == -59)
+  //{
+        
+  //}
+    
 
   document.querySelector("main ol").append(li);
 
