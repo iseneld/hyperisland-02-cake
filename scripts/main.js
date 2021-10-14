@@ -5,6 +5,8 @@
 // Function: Remove outdated date.
 // Function: Only first show H:M:S when below 24h.
 
+// Set the date we're counting down to
+
 function printHolidays(data) {
   var countDownDate = new Date(data.date).getTime();
   var li = document.createElement("li"); 
@@ -39,7 +41,7 @@ function printHolidays(data) {
     }
   }, 1000);
 
-  document.querySelector("body ol").append(li);
+  document.querySelector("main ol").append(li);
 
 }
 
