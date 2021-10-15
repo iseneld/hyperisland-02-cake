@@ -7,10 +7,30 @@
 
 // Set the date we're counting down to
 
+function createListItems(data) {
+    var li = document.createElement("li");
+    var h2 = document.createElement("h2");
+    var h3 = document.createElement("h3");
+    var button = document.createElement("button");
+    
+    h2.append(data.name);
+    button.innerHTML = "fav"
+    li.append(h2, h3, button);
+
+
+    document.querySelector("main ol").append(li);
+}
+
+
+
+
+
+//funcion printHolidayName(data) {
+//    let holidayName = "<li>"+`${data[i].name}`+"</li>"; //This prints name
+//}
+
 function printHolidays(data) {
   var countDownDate = new Date(data.date).getTime();
-  var li = document.createElement("li"); 
-  li.append(data.date);
 
   var x = setInterval(function () {
     // Get today's date and time
@@ -27,10 +47,10 @@ function printHolidays(data) {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     if (distance > 86400000) {
-      li.innerHTML = days + " days";
+      document.querySelector("main ol li:nth-child(" + `${data.id}` + ") h3").innerHTML = days + " days";
     } else {
       // Display the result in the element with id="demo"
-      li.innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+      document.querySelector("main ol li:nth-child(" + `${data.id}` + ") h3").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
     }
 
     // If the count down is finished, write some text
@@ -41,23 +61,24 @@ function printHolidays(data) {
   }, 1000);
 
   //This will remove the outdated date and replace with new one
+  //  if(day == -1) {}
   //if (day == 0 && hour == -23 && min == -59 && sec == -59)
   //{
         
   //}
-    
-
-  document.querySelector("main ol").append(li);
 
 }
+
+
 
 function getHolidays() {
   fetch("../data/holidays.json")
     .then((response) => response.json())
     .then((data) => {
       for (let i = 0; i < 5; i++) {
+          createListItems(data[i]);
         printHolidays(data[i]); // Function call >>
-        let holidayName = "<li>"+`${data[i].name}`+"</li>"; //This prints name
+        
         
       }
     
@@ -65,3 +86,7 @@ function getHolidays() {
 
 
 }
+
+
+    
+    
