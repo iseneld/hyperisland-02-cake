@@ -57,6 +57,11 @@ function getHolidays() {
     .then((data) => {
       for (let i = 0; i < 5; i++) {
         printHolidays(data[i]); // Function call >>
+        let holidayName = "<li>"+`${data[i].name}`+"</li>"; //This prints name
+        
       }
+    
     });
+
+
 }
