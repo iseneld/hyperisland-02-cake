@@ -47,7 +47,7 @@ main .main__card {
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-main .main__card h1 {
+main .main__card h2 {
   font-family: "Pacifico", cursive;
   margin-bottom: 0.2em;
   margin-top: 0.2em;
@@ -55,7 +55,7 @@ main .main__card h1 {
   color: #4f6d7a;
 }
 
-main .main__card h4 {
+main .main__card h3 {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   margin: 0;

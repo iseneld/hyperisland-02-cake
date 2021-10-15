@@ -12,18 +12,15 @@ function createListItems(data) {
     var h2 = document.createElement("h2");
     var h3 = document.createElement("h3");
     var button = document.createElement("button");
+    var div = document.createElement("div");
     
     h2.append(data.name);
     button.innerHTML = "fav"
-    li.append(h2, h3, button);
-
+    div.append(h3, button);
+    li.append(h2, div);
 
     document.querySelector("main ol").append(li);
 }
-
-
-
-
 
 //funcion printHolidayName(data) {
 //    let holidayName = "<li>"+`${data[i].name}`+"</li>"; //This prints name
@@ -67,8 +64,9 @@ function printHolidays(data) {
         
   //}
 
-}
+document.querySelector("ol li:first-child").setAttribute("class", "main__card");
 
+}
 
 
 function getHolidays() {
@@ -83,7 +81,7 @@ function getHolidays() {
       }
     
     });
-
+    
 
 }
 
