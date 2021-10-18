@@ -7,8 +7,9 @@
 
 // Set the date we're counting down to
 
+
 function createListItems(data, selected) {
-    
+  
     var li = document.createElement("li");
     var h2 = document.createElement("h2");
     var h3 = document.createElement("h3");
@@ -38,7 +39,6 @@ function createListItems(data, selected) {
     }
     
 }
-
 
 function printHolidays(data) {
   var countDownDate = new Date(data.date).getTime();
