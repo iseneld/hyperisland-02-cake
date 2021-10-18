@@ -7,14 +7,18 @@
 
 // Set the date we're counting down to
 
-function createListItems(data) {
+function createListItems(data, selected) {
     
     var li = document.createElement("li");
     var h2 = document.createElement("h2");
     var h3 = document.createElement("h3");
     var button = document.createElement("button");
     var div = document.createElement("div");
-    
+    button.setAttribute("id", `${data.id}`);
+    li.setAttribute("id", `list-${data.id}`)
+    if(selected){
+      li.classList.add('favourite_selection');
+    }
     if (data.id == 1) {
         h2.append(data.name);
         button.innerHTML = "fav";
@@ -85,17 +89,51 @@ function getHolidays() {
     .then((response) => response.json())
     .then((data) => {
       for (let i = 0; i < 5; i++) {
-          createListItems(data[i]);
+          var selected = localStorage.getItem('favourites').includes(i + 1) 
+          createListItems(data[i], selected);
           printHolidays(data[i]);
+
          // Function call >>
         
       }
-    
+      favouritesActive()
     });
-    
 
 }
 
+conso
+//creating localStorage
 
-    
-    
+
+
+function favouritesActive() {  
+  console.log('sss')
+  const buttons = document.querySelectorAll('button')
+  console.log('buttons', buttons)
+    // First check if there's favorite list already
+    // if not, set it to be an empty array
+    let favourites = JSON.parse(localStorage.getItem('favourites')) || []
+    console.log(favourites)
+
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // check if it is already added or not
+        // if it's not added then only add it to the list
+
+        //check if button have class selected
+        //if does remove class
+        //and remove from local storage
+
+        var id = this.event.target.getAttribute('id');
+        document.getElementById(`list-${id}`).classList.add('favourite_selection');
+
+        if(!favourites.includes(button.id)){ 
+          favourites.push(button.id)
+          localStorage.setItem('favourites', JSON.stringify(favourites))
+          
+          console.log(localStorage.getItem('favourites'))
+        }
+      })
+    })
+}  

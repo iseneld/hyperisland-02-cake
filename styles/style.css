@@ -113,4 +113,9 @@ main .chevron {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.favourite_selection {
+  background-color: #ffbd9b;
+  padding: 20px;
+}
 /*# sourceMappingURL=style.css.map */
