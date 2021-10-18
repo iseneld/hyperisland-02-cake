@@ -29,15 +29,12 @@ function createListItems(data) {
         div.append(h3, button);
         li.append(h2, div);
 
+
         document.querySelector("main ol").append(li);
     }
     
 }
 
-
-//funcion printHolidayName(data) {
-//    let holidayName = "<li>"+`${data[i].name}`+"</li>"; //This prints name
-//}
 
 function printHolidays(data) {
   var countDownDate = new Date(data.date).getTime();
@@ -89,7 +86,8 @@ function getHolidays() {
     .then((data) => {
       for (let i = 0; i < 5; i++) {
           createListItems(data[i]);
-        printHolidays(data[i]); // Function call >>
+          printHolidays(data[i]);
+         // Function call >>
         
       }
     
