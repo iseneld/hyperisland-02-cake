@@ -8,32 +8,28 @@
 // Set the date we're counting down to
 
 function createListItems(data) {
-    
-    var li = document.createElement("li");
-    var h2 = document.createElement("h2");
-    var h3 = document.createElement("h3");
-    var button = document.createElement("button");
-    var div = document.createElement("div");
-    
-    if (data.id == 1) {
-        h2.append(data.name);
-        button.innerHTML = "fav";
-        div.append(h3);
-        li.append(h2, div);
+  var li = document.createElement("li");
+  var h2 = document.createElement("h2");
+  var h3 = document.createElement("h3");
+  var button = document.createElement("button");
+  var div = document.createElement("div");
 
-        document.querySelector("main ol").append(li);
-    }
-    else {
-        h2.append(data.name);
-        button.innerHTML = "fav";
-        div.append(h3, button);
-        li.append(h2, div);
+  if (data.id == 1) {
+    h2.append(data.name);
+    button.innerHTML = "fav";
+    div.append(h3);
+    li.append(h2, div);
 
-        document.querySelector("main ol").append(li);
-    }
-    
+    document.querySelector("main ol").append(li);
+  } else {
+    h2.append(data.name);
+    button.innerHTML = "fav";
+    div.append(h3, button);
+    li.append(h2, div);
+
+    document.querySelector("main ol").append(li);
+  }
 }
-
 
 //funcion printHolidayName(data) {
 //    let holidayName = "<li>"+`${data[i].name}`+"</li>"; //This prints name
