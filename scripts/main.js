@@ -117,24 +117,30 @@ function favouritesActive() {
 
 
     buttons.forEach(button => {
-      
-      button.addEventListener('click', () => {
-        // check if it is already added or not
-        // if it's not added then only add it to the list
-
+        button.addEventListener('click', () => {
+       
         //check if button have class selected
         //if does remove class
         //and remove from local storage
-
+      
         var id = this.event.target.getAttribute('id');
-        document.getElementById(`list-${id}`).classList.add('favourite_selection');
+        document.getElementById(`list-${id}`).classList.toggle('favourite_selection');
 
         if(!favourites.includes(button.id)){ 
           favourites.push(button.id)
           localStorage.setItem('favourites', JSON.stringify(favourites))
           
           console.log(localStorage.getItem('favourites'))
+          
+        }
+        var listItem = document.getElementById(`list-${id}`); 
+        console.log(listItem.classList)
+        if(listItem.classList.contains(favourite_selection)){
+          listItem.classList.toggle('favourite_selection')
+          JSON.parse(localStorage.removeItem("favourites[" + `${id + 1}` + "]")) 
+          
         }
       })
+      
     })
 }  
