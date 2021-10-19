@@ -22,7 +22,7 @@ function createListItems(data, selected) {
     }
     if (data.id == 1) {
         h2.append(data.name);
-        button.innerHTML = "fav";
+        button.innerHTML;
         div.append(h3);
         li.append(h2, div);
 
@@ -30,7 +30,7 @@ function createListItems(data, selected) {
     }
     else {
         h2.append(data.name);
-        button.innerHTML = "fav";
+        button.innerHTML;
         div.append(h3, button);
         li.append(h2, div);
 
