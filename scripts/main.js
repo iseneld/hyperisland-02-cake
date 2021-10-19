@@ -27,7 +27,9 @@ function createListItems(data, selected) {
         li.append(h2, div);
 
         document.querySelector("main ol").append(li);
-    }
+        document.querySelector("header").setAttribute("style", "background-image: url('../" + `${data.header}` + "');")
+    }  
+   
     else {
         h2.append(data.name);
         button.innerHTML = "fav";
