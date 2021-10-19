@@ -25,6 +25,7 @@ function createListItems(data, selected) {
         button.innerHTML;
         div.append(h3);
         li.append(h2, div);
+        
 
         document.querySelector("main ol").append(li);
     }
@@ -93,12 +94,17 @@ function getHolidays() {
           var selected = localStorage.getItem('favourites').includes(i + 1) }
           createListItems(data[i], selected);
           printHolidays(data[i]);
+         
+          
 
          // Function call >>
         
       }
+      
+
       favouritesActive()
     });
+
 
 }
 
@@ -144,3 +150,46 @@ function favouritesActive() {
       
     })
 }  
+
+
+
+    //first I fetch the button here:
+ 
+    function buttonEnabled() {
+
+        // set variables for button and list
+    
+        var buttonElement = document.getElementsByTagName(`button`);
+        var lists = document.querySelector("li");
+    
+        // check if <li> contains class "favourite_selection", then execute class on button.
+        
+        if (lists.classList.contains("favourite_selection" )) {
+            buttonElement.setAttribute("class", "filled-button");
+        }
+        // if <li> does not contain class "favourite_selection", then remove class on button.
+        else {
+            //buttonElement.classList.remove("filled-button");
+        }
+    }
+
+    function onclickButton() {
+
+        buttonEnabled();
+    }
+
+
+    //I tried this code as well but it does same thing: buttonElement.classList.add();
+    //then when button is clicked, a class should be added:
+
+        
+    
+    //when the button is clicked again, the class should be removed:
+    //if(buttonElement.clicked == true)
+    
+
+
+    //if(document.getElementByClass("MyId").className == "hide")
+   //document.getElementById("MyId").className = "show";
+    //else
+   //document.getElementById("MyId").className = "hide";    
