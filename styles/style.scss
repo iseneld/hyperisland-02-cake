@@ -99,6 +99,7 @@ main {
   background-color: $color4;
   width: 95%;
   align-self: center;
+  color: white;
 }
 
 
@@ -115,7 +116,7 @@ button {
 }
 
 button:hover {
-  background-image: url(../images/filled-star-white.png);
+  background-image: url(../images/filled-star-yellow.png);
   background-size: cover;
 }
 

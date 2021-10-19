@@ -131,6 +131,7 @@ main .chevron {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  color: white;
 }
 
 button {
@@ -145,7 +146,7 @@ button {
 }
 
 button:hover {
-  background-image: url(../images/filled-star-white.png);
+  background-image: url(../images/filled-star-yellow.png);
   background-size: cover;
 }
 
