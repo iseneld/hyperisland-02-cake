@@ -14,6 +14,14 @@ body {
   margin: 0;
 }
 
+.header {
+  display: -ms-grid;
+  display: grid;
+  height: 50vh;
+  width: 100vw;
+  background-color: #4f6d7a;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,6 +53,7 @@ main .main__card {
   border: 4px solid #fff;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
 }
 
 main .main__card h2 {
