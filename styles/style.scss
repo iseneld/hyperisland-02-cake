@@ -98,6 +98,7 @@ button {
   background-position: center;
   border: none;
   background-color: transparent;
+  margin-left: 2em;
 
 }
 
@@ -106,3 +107,8 @@ button:hover {
   background-size: cover;
 }
 
+
+div {
+  display: flex;
+  align-items: center;
+}

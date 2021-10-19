@@ -130,10 +130,20 @@ button {
   background-position: center;
   border: none;
   background-color: transparent;
+  margin-left: 2em;
 }
 
 button:hover {
   background-image: url(../images/filled-star-white.png);
   background-size: cover;
+}
+
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=style.css.map */
