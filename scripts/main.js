@@ -101,7 +101,6 @@ function getHolidays() {
 
 }
 
-conso
 //creating localStorage
 
 
@@ -117,6 +116,7 @@ function favouritesActive() {
 
 
     buttons.forEach(button => {
+      
       button.addEventListener('click', () => {
         // check if it is already added or not
         // if it's not added then only add it to the list
