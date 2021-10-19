@@ -107,8 +107,10 @@ function getHolidays() {
 function favouritesActive() {
   const buttons = document.querySelectorAll("button");
   console.log("buttons", buttons);
+
   // First check if there's favorite list already
   // if not, set it to be an empty array
+
   let favourites = JSON.parse(localStorage.getItem("favourites")) || [];
   console.log(favourites);
 
@@ -119,20 +121,27 @@ function favouritesActive() {
       //and remove from local storage
 
       var id = this.event.target.getAttribute("id");
+
+      // console.log(id.includes("favourite_selection"));
+
       document
         .getElementById(`list-${id}`)
         .classList.toggle("favourite_selection");
 
       if (!favourites.includes(button.id)) {
-        favourites.push(button.id);
+        favourites[button.id] = button.id;
+        localStorage.setItem("favourites", JSON.stringify(favourites));
+      } else {
+        delete favourites[button.id];
         localStorage.setItem("favourites", JSON.stringify(favourites));
       }
       var listItem = document.getElementById(`list-${id}`);
       console.log(listItem.classList);
-      if (listItem.classList.contains(favourite_selection)) {
-        listItem.classList.toggle("favourite_selection");
-        JSON.parse(localStorage.removeItem("favourites[" + `${id + 1}` + "]"));
-      }
+
+      // if (listItem.classList.contains(favourite_selection)) {
+      //   listItem.classList.toggle("favourite_selection");
+      //   JSON.parse(localStorage.removeItem("favourites[" + `${id + 1}` + "]"));
+      // }
     });
   });
-}  
+}
