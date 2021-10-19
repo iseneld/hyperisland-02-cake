@@ -102,7 +102,6 @@ function getHolidays() {
 
 }
 
-conso
 //creating localStorage
 
 
