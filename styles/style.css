@@ -14,6 +14,14 @@ body {
   margin: 0;
 }
 
+.header {
+  display: -ms-grid;
+  display: grid;
+  height: 50vh;
+  width: 100vw;
+  background-color: #4f6d7a;
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,6 +53,8 @@ main .main__card {
   border: 4px solid #fff;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 main .main__card h2 {
@@ -98,7 +108,8 @@ main ol li {
   background-color: #EDDCD2;
   margin: 20px;
   border-radius: 8px;
-  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 main .chevron {
@@ -116,6 +127,35 @@ main .chevron {
 
 .favourite_selection {
   background-color: #ffbd9b;
-  padding: 20px;
+  width: 95%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: white;
+}
+
+button {
+  width: 2.5em;
+  height: 2.5em;
+  background-image: url(../images/empty-star-white.png);
+  background-size: cover;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+  margin-left: 2em;
+}
+
+button:hover {
+  background-image: url(../images/filled-star-yellow.png);
+  background-size: cover;
+}
+
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=style.css.map */
