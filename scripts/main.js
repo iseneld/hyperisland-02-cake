@@ -9,33 +9,36 @@
 
 
 function createListItems(data, selected) {
-  var li = document.createElement("li");
-  var h2 = document.createElement("h2");
-  var h3 = document.createElement("h3");
-  var button = document.createElement("button");
-  var div = document.createElement("div");
-  button.setAttribute("id", `${data.id}`);
-  li.setAttribute("id", `list-${data.id}`);
+  
+    var li = document.createElement("li");
+    var h2 = document.createElement("h2");
+    var h3 = document.createElement("h3");
+    var button = document.createElement("button");
+    var div = document.createElement("div");
+    button.setAttribute("id", `${data.id}`);
+    li.setAttribute("id", `list-${data.id}`)
+    if(selected){
+      li.classList.add('favourite_selection');
+    }
+    if (data.id == 1) {
+        h2.append(data.name);
+        button.innerHTML = "fav";
+        div.append(h3);
+        li.append(h2, div);
 
-  if (selected) {
-    li.classList.add("favourite_selection");
-  }
+        document.querySelector("main ol").append(li);
+        document.querySelector("header").setAttribute("style", "background-image: url('../" + `${data.header}` + "');")
+    }  
+   
+    else {
+        h2.append(data.name);
+        button.innerHTML = "fav";
+        div.append(h3, button);
+        li.append(h2, div);
 
-  if (data.id == 1) {
-    h2.append(data.name);
-    button.innerHTML = "fav";
-    div.append(h3);
-    li.append(h2, div);
 
-    document.querySelector("main ol").append(li);
-  } else {
-    h2.append(data.name);
-    button.innerHTML = "fav";
-    div.append(h3, button);
-    li.append(h2, div);
-
-    document.querySelector("main ol").append(li);
-  }
+        document.querySelector("main ol").append(li);
+    }
 }
 
 function printHolidays(data) {
