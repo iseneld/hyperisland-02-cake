@@ -116,6 +116,24 @@ main .chevron {
 
 .favourite_selection {
   background-color: #ffbd9b;
-  padding: 20px;
+  width: 95%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+button {
+  width: 2.5em;
+  height: 2.5em;
+  background-image: url(../images/empty-star-white.png);
+  background-size: cover;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+}
+
+button:hover {
+  background-image: url(../images/filled-star-white.png);
+  background-size: cover;
 }
 /*# sourceMappingURL=style.css.map */
