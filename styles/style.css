@@ -55,6 +55,7 @@ main .main__card {
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
   padding-bottom: 20px;
+  height: 10em;
 }
 
 main .main__card h2 {
