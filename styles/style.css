@@ -5,20 +5,19 @@
 body {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 0.8fr 1fr 0.8fr;
-      grid-template-columns: 0.8fr 1fr 0.8fr;
-  -ms-grid-rows: 0.5fr 2fr 5fr 1fr;
-      grid-template-rows: 0.5fr 2fr 5fr 1fr;
-  grid-column-gap: 2px;
-  grid-row-gap: 2px;
+  -ms-grid-rows: 34vh auto;
+      grid-template-rows: 34vh auto;
   margin: 0;
 }
 
 header {
-  display: -ms-grid;
-  display: grid;
-  height: 50vh;
-  width: 100vw;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  height: 40vh;
   background-color: #4f6d7a;
 }
 
@@ -30,12 +29,12 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 3;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
-  grid-area: 2 / 2 / 5 / 3;
-  height: 100vh;
+  grid-column: 2 / 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
 }
 
 main p {
@@ -44,6 +43,7 @@ main p {
 }
 
 main .main__card {
+  height: 10vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
