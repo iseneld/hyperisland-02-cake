@@ -89,7 +89,8 @@ function getHolidays() {
     .then((response) => response.json())
     .then((data) => {
       for (let i = 0; i < 5; i++) {
-          var selected = localStorage.getItem('favourites').includes(i + 1) 
+        if(!localStorage.length == 0) {
+          var selected = localStorage.getItem('favourites').includes(i + 1) }
           createListItems(data[i], selected);
           printHolidays(data[i]);
 
