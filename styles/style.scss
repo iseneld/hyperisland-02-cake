@@ -120,6 +120,11 @@ button:hover {
   background-size: cover;
 }
 
+button:focus {
+  background-image: url(../images/filled-star-yellow.png);
+  background-size: cover;
+}
+
 
 div {
   display: flex;
