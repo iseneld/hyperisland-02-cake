@@ -69,6 +69,8 @@ main {
     flex-direction: column;
     list-style-type: none;
     margin: 0;
+    width: 80%;
+    margin-top: -5em;
 
     li {
       color: $color1;

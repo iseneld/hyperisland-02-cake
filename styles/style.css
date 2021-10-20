@@ -9,8 +9,8 @@ body {
   display: grid;
   -ms-grid-columns: 1fr minmax(30rem, 60rem) 1fr;
       grid-template-columns: 1fr minmax(30rem, 60rem) 1fr;
-  -ms-grid-rows: 50vh auto;
-      grid-template-rows: 50vh auto;
+  -ms-grid-rows: 48vh auto;
+      grid-template-rows: 48vh auto;
   margin: 0;
 }
 
@@ -21,7 +21,7 @@ header {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
-  height: 50vh;
+  height: 48vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -95,6 +95,8 @@ main ol {
           flex-direction: column;
   list-style-type: none;
   margin: 0;
+  width: 80%;
+  margin-top: -5em;
 }
 
 main ol li {
