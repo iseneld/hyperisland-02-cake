@@ -100,7 +100,14 @@ main {
   width: 100%;
   align-self: center;
   color: white;
+
+  button {
+    background-image: url(../images/filled-star-yellow.png);
+    background-size: cover;
+  }
+
 }
+
 
 button {
   width: 2.5em;
@@ -114,11 +121,6 @@ button {
 }
 
 button:hover {
-  background-image: url(../images/filled-star-yellow.png);
-  background-size: cover;
-}
-
-.filled-button {
   background-image: url(../images/filled-star-yellow.png);
   background-size: cover;
 }

@@ -16,7 +16,8 @@ function createListItems(data, selected) {
     var button = document.createElement("button");
     var div = document.createElement("div");
     button.setAttribute("id", `${data.id}`);
-    li.setAttribute("id", `list-${data.id}`)
+    li.setAttribute("id", `list-${data.id}`);
+
     if(selected){
       li.classList.add('favourite_selection');
     }
@@ -155,3 +156,5 @@ function favouritesActive() {
     });
   });
 }
+
+

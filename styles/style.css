@@ -144,6 +144,11 @@ main .chevron {
   color: white;
 }
 
+.favourite_selection button {
+  background-image: url(../images/filled-star-yellow.png);
+  background-size: cover;
+}
+
 button {
   width: 2.5em;
   height: 2.5em;
@@ -156,11 +161,6 @@ button {
 }
 
 button:hover {
-  background-image: url(../images/filled-star-yellow.png);
-  background-size: cover;
-}
-
-.filled-button {
   background-image: url(../images/filled-star-yellow.png);
   background-size: cover;
 }
