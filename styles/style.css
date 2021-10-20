@@ -95,7 +95,7 @@ main ol {
           flex-direction: column;
   list-style-type: none;
   margin: auto;
-  width: 80%;
+  width: 70%;
   margin-top: -5em;
 }
 
@@ -120,6 +120,17 @@ main ol li {
   margin: 20px;
   border-radius: 1.2rem;
   padding: 0 2rem 0;
+}
+
+main ol li h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+}
+
+main ol li h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: semi-bold;
 }
 
 main .chevron {
@@ -152,7 +163,7 @@ main .chevron {
 button {
   width: 2.5em;
   height: 2.5em;
-  background-image: url(../images/empty-star-white.png);
+  background-image: url(../images/empty-star-dark.png);
   background-size: cover;
   background-position: center;
   border: none;
@@ -163,6 +174,8 @@ button {
 button:hover {
   background-image: url(../images/filled-star-yellow.png);
   background-size: cover;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
 }
 
 div {
