@@ -79,7 +79,12 @@ function printHolidays(data) {
     }
   }, 1000);
 
-  //This will remove the outdated date and replace with new one
+
+
+//document.querySelector("main ol li:first-child(" + `${data.id}` + ") h3").innerHTMl = days + "d" + hours + "h " + minutes + "m " + seconds + "s ";
+  
+  
+    //This will remove the outdated date and replace with new one
   // if(day == -1) {}
   //if (day == 0 && hour == -23 && min == -59 && sec == -59)
   //{
@@ -89,6 +94,7 @@ function printHolidays(data) {
   document
     .querySelector("ol li:first-child")
     .setAttribute("class", "main__card");
+
 }
 
 function getHolidays() {
