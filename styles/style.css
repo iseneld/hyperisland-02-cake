@@ -94,7 +94,7 @@ main ol {
       -ms-flex-direction: column;
           flex-direction: column;
   list-style-type: none;
-  margin: 0;
+  margin: auto;
   width: 80%;
   margin-top: -5em;
 }
