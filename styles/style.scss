@@ -31,8 +31,13 @@ main {
   transform: translateY(-8rem);
 
   p {
-    margin: 0px;
     padding: 0;
+    font-family: $fontMain;
+    font-size: 14px;
+    margin-top: -40px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+
   }
 
   .main__card {
@@ -54,7 +59,7 @@ main {
     }
     h3 {
       font-family: $fontDates;
-      font-size: 32px;
+      font-size: 46px;
       font-weight: 100;
       margin: 0;
     }
@@ -94,7 +99,6 @@ main {
 
       h3 {
         font-family: $fontMain;
-        font-weight: semi-bold;
       }
     }
   }
@@ -122,7 +126,7 @@ main {
 button {
   width: 2.5em;
   height: 2.5em;
-  background-image: url(../images/empty-star-dark.png);
+  background-image: url(../images/orange-empty-star.png);
   background-size: cover;
   background-position: center;
   border: none;

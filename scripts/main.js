@@ -89,8 +89,12 @@ function printHolidays(data, i) {
     
     
     if(i == 0){
-     document.querySelector("ol li:first-child h3").innerHTML = "<center>" + days + " days " + "<br>"  +  hours +  " : " + minutes + " : " + seconds;
+    document.querySelector("ol li:first-child h3").innerHTML = "<center>" + days + " days | " +  hours +  " : " + minutes + " : " + seconds;
      
+    if (distance < 86400000) {
+    document.querySelector("ol li:first-child h3").innerHTML = hours +  " : " + minutes + " : " + seconds;
+     
+    }
     }
   }, 1000);
 
