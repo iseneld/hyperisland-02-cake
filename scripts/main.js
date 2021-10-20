@@ -89,12 +89,37 @@ function printHolidays(data, i) {
     
     
     if(i == 0){
-    document.querySelector("ol li:first-child h3").innerHTML = "<center>" + days + " days | " +  hours +  " : " + minutes + " : " + seconds;
+      document.querySelector("ol li:first-child h3").innerHTML = "<center>" + days + " days | " +  hours +  " : " + minutes + " : " + seconds;
      
-    if (distance < 86400000) {
-    document.querySelector("ol li:first-child h3").innerHTML = hours +  " : " + minutes + " : " + seconds;
+    
+        if (distance < 86400000) {
+          document.querySelector("ol li:first-child h3").innerHTML = hours +  " : " + minutes + " : " + seconds;
+        }
 
-       
+        if(hours < 10) {
+          document.querySelector("ol li:first-child h3").innerHTML = "<center>" + days + " days | " + "0" + hours +  " : " + minutes + " : " + seconds;
+        }
+
+        if(minutes < 10) {
+          document.querySelector("ol li:first-child h3").innerHTML = "<center>" + days + " days | "  + hours +  " : " + "0" + minutes + " : " + seconds;
+        }
+        
+        if(seconds < 10) {
+          document.querySelector("ol li:first-child h3").innerHTML = "<center>" + days + " days | "  + hours +  " : " + minutes + " : " + "0" + seconds;
+        }
+
+        if(hours < 10 && seconds < 10) {
+          document.querySelector("ol li:first-child h3").innerHTML = "<center>" + days + " days | "  + "0" + hours +  " : " + minutes + " : " + "0" + seconds;
+        }
+
+        if(hours < 10 && minutes < 10) {
+          document.querySelector("ol li:first-child h3").innerHTML = "<center>" + days + " days | "  + "0" + hours +  " : " + "0" + minutes + " : " + seconds;
+        }
+
+        if(minutes < 10 && seconds < 10) {
+          document.querySelector("ol li:first-child h3").innerHTML = "<center>" + days + " days | " + hours +  " : " + "0" + minutes + " : " + "0" + seconds;
+        }
+
     }
     //if ((days || hours || minutes || seconds) < 10)  {
     //    document.querySelector("ol li:first-child h3").innerHTML = "<center>" + "0"; 
@@ -105,7 +130,7 @@ function printHolidays(data, i) {
 
 
 
-    }
+    
   }, 1000);
 
   
