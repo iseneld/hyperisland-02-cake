@@ -133,7 +133,7 @@ main .chevron {
 
 .favourite_selection {
   background-color: #ffbd9b;
-  width: 95%;
+  width: 100%;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
