@@ -81,9 +81,9 @@ function printHolidays(data, i) {
     }
     
     if(i == 0){
-     document.querySelector("ol li:first-child h3").innerHTML = days + "D " + " : " + hours + "H " + " : " + minutes + "M " + " : " + seconds + "S ";
+     document.querySelector("ol li:first-child h3").innerHTML = "<center>" + days + " days " + "<br>"  +  hours +  " : " + minutes + " : " + seconds;
+     
     }
-
   }, 1000);
 
   
