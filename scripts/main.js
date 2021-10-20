@@ -65,12 +65,12 @@ function printHolidays(data, i) {
     if (distance > 86400000) {
       document.querySelector(
         "main ol li:nth-child(" + `${data.id}` + ") h3"
-      ).innerHTML = days + "D ";
+      ).innerHTML = days + " days ";
     } else {
       // Display the result in the element with id="demo"
       document.querySelector(
         "main ol li:nth-child(" + `${data.id}` + ") h3"
-      ).innerHTML = hours + "H " + minutes + "M " + seconds + "S ";
+      ).innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
     }
 
     // If the count down is finished, write some text
@@ -81,7 +81,7 @@ function printHolidays(data, i) {
     }
     
     if(i == 0){
-     document.querySelector("ol li:first-child h3").innerHTML = days + "D " + hours + "H " + minutes + "M " + seconds + "S ";
+     document.querySelector("ol li:first-child h3").innerHTML = days + "D " + " : " + hours + "H " + " : " + minutes + "M " + " : " + seconds + "S ";
     }
 
   }, 1000);
