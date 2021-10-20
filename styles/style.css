@@ -9,8 +9,8 @@ body {
   display: grid;
   -ms-grid-columns: 1fr minmax(30rem, 60rem) 1fr;
       grid-template-columns: 1fr minmax(30rem, 60rem) 1fr;
-  -ms-grid-rows: 38.2vh auto;
-      grid-template-rows: 38.2vh auto;
+  -ms-grid-rows: 50vh auto;
+      grid-template-rows: 50vh auto;
   margin: 0;
 }
 
@@ -21,11 +21,10 @@ header {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
-  height: 38.2vh;
+  height: 50vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-bottom: 0.5rem solid #4f6d7a;
 }
 
 main {
@@ -60,6 +59,9 @@ main .main__card {
           flex-direction: column;
   margin: 0;
   background-color: #fff1e6;
+  border: 0.5rem solid #fff;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 20px;
   padding: 0 2rem 2rem;
 }

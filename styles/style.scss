@@ -19,7 +19,6 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border-bottom: 0.5rem solid $color1;
 }
 
 main {
@@ -41,7 +40,8 @@ main {
     flex-direction: column;
     margin: 0;
     background-color: $color2;
-    //border: 0.5rem solid #fff;
+    border: 0.5rem solid #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 20px;
     padding: 0 2rem 2rem;
 
