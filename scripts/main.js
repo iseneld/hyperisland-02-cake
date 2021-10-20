@@ -43,7 +43,7 @@ function createListItems(data, selected) {
     }
 }
 
-function printHolidays(data) {
+function printHolidays(data, i) {
   var countDownDate = new Date(data.date).getTime();
 
   var x = setInterval(function () {
@@ -52,6 +52,7 @@ function printHolidays(data) {
 
     // Find the distance between now and the count down date
     var distance = countDownDate - now;
+   
 
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -64,12 +65,12 @@ function printHolidays(data) {
     if (distance > 86400000) {
       document.querySelector(
         "main ol li:nth-child(" + `${data.id}` + ") h3"
-      ).innerHTML = days + " days";
+      ).innerHTML = days + "D ";
     } else {
       // Display the result in the element with id="demo"
       document.querySelector(
         "main ol li:nth-child(" + `${data.id}` + ") h3"
-      ).innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+      ).innerHTML = hours + "H " + minutes + "M " + seconds + "S ";
     }
 
     // If the count down is finished, write some text
@@ -78,12 +79,18 @@ function printHolidays(data) {
       document.querySelector("ol li:first-child").innerHTML =
         "Yay! Today's the day!";
     }
+    
+    if(i == 0){
+     document.querySelector("ol li:first-child h3").innerHTML = days + "D " + hours + "H " + minutes + "M " + seconds + "S ";
+    }
+
   }, 1000);
 
+  
 
 
 //document.querySelector("main ol li:first-child(" + `${data.id}` + ") h3").innerHTMl = days + "d" + hours + "h " + minutes + "m " + seconds + "s ";
-  
+ 
   
     //This will remove the outdated date and replace with new one
   // if(day == -1) {}
@@ -107,7 +114,7 @@ function getHolidays() {
           var selected = localStorage.getItem("favourites").includes(i + 1);
         }
         createListItems(data[i], selected);
-        printHolidays(data[i]);
+        printHolidays(data[i], i);
         // Function call >>
       }
       favouritesActive();
