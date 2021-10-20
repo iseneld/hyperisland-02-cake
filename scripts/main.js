@@ -17,6 +17,8 @@ function createListItems(data, selected) {
     var div = document.createElement("div");
     button.setAttribute("id", `${data.id}`);
     li.setAttribute("id", `list-${data.id}`);
+    var p = document.createElement("p");
+
 
     if(selected){
       li.classList.add('favourite_selection');
@@ -25,8 +27,8 @@ function createListItems(data, selected) {
         h2.append(data.name);
         button.innerHTML;
         div.append(h3);
-        li.append(h2, div);
-        
+        li.append(h2, p, div);
+        p.append(data.date)
 
         document.querySelector("main ol").append(li);
         document.querySelector("header").setAttribute("style", "background-image: url('../" + `${data.header}` + "');")
@@ -43,9 +45,14 @@ function createListItems(data, selected) {
     }
 }
 
+// var divDateMain = document.createElement("div");
+// var h3DateMain = document.createElement("h3")
+// document.querySelector("ol li:first-child").append(divDateMain)
+// divDateMain.append(h3DateMain)
+
 function printHolidays(data, i) {
   var countDownDate = new Date(data.date).getTime();
-
+  
   var x = setInterval(function () {
     // Get today's date and time
     var now = new Date().getTime();
@@ -79,6 +86,7 @@ function printHolidays(data, i) {
       document.querySelector("ol li:first-child").innerHTML =
         "Yay! Today's the day!";
     }
+    
     
     if(i == 0){
      document.querySelector("ol li:first-child h3").innerHTML = days + "D " + " : " + hours + "H " + " : " + minutes + "M " + " : " + seconds + "S ";
