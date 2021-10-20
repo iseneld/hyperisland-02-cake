@@ -137,6 +137,24 @@ function getHolidays() {
         }
         createListItems(data[i], selected);
         printHolidays(data[i], i);
+        
+        // Function call >>
+      }
+      favouritesActive();
+    });
+}
+
+function expandHolidaysList() {
+    fetch("../data/holidays.json")
+    .then((response) => response.json())
+    .then((data) => {
+      for (let i = 0; i < 10; i++) {
+        if (!localStorage.length == 0) {
+          var selected = localStorage.getItem("favourites").includes(i + 1);
+        }
+        createListItems(data[i], selected);
+        printHolidays(data[i], i);
+        
         // Function call >>
       }
       favouritesActive();
