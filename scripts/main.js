@@ -149,9 +149,3 @@ function favouritesActive() {
     });
   });
 }
-<<<<<<< HEAD
-
-
- 
-=======
->>>>>>> 69648ef2d3b270ebc4515d026f8d54bebdcbd808
