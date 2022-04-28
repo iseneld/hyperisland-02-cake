@@ -202,6 +202,7 @@ function getHolidays() {
   fetch("../data/holidays.json")
     .then((response) => response.json())
     .then((data) => {
+      console.log(typeof data);
       for (let i = 0; i < 5; i++) {
         if (!localStorage.length == 0) {
           var selected = localStorage.getItem("favourites").includes(i + 1);
