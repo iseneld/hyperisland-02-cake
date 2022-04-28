@@ -7,42 +7,41 @@
 
 // Set the date we're counting down to
 
-
 function createListItems(data, selected) {
-  
-    var li = document.createElement("li");
-    var h2 = document.createElement("h2");
-    var h3 = document.createElement("h3");
-    var button = document.createElement("button");
-    var div = document.createElement("div");
-    button.setAttribute("id", `${data.id}`);
-    li.setAttribute("id", `list-${data.id}`);
-    var p = document.createElement("p");
+  var li = document.createElement("li");
+  var h2 = document.createElement("h2");
+  var h3 = document.createElement("h3");
+  var button = document.createElement("button");
+  var div = document.createElement("div");
+  button.setAttribute("id", `${data.id}`);
+  li.setAttribute("id", `list-${data.id}`);
+  var p = document.createElement("p");
 
+  if (selected) {
+    li.classList.add("favourite_selection");
+  }
+  if (data.id == 1) {
+    h2.append(data.name);
+    button.innerHTML;
+    div.append(h3);
+    li.append(h2, p, div);
+    p.append(data.date);
 
-    if(selected){
-      li.classList.add('favourite_selection');
-    }
-    if (data.id == 1) {
-        h2.append(data.name);
-        button.innerHTML;
-        div.append(h3);
-        li.append(h2, p, div);
-        p.append(data.date)
+    document.querySelector("main ol").append(li);
+    document
+      .querySelector("header")
+      .setAttribute(
+        "style",
+        "background-image: url('../" + `${data.header}` + "');"
+      );
+  } else {
+    h2.append(data.name);
+    button.innerHTML;
+    div.append(h3, button);
+    li.append(h2, div);
 
-        document.querySelector("main ol").append(li);
-        document.querySelector("header").setAttribute("style", "background-image: url('../" + `${data.header}` + "');")
-    }  
-   
-    else {
-        h2.append(data.name);
-        button.innerHTML;
-        div.append(h3, button);
-        li.append(h2, div);
-
-
-        document.querySelector("main ol").append(li);
-    }
+    document.querySelector("main ol").append(li);
+  }
 }
 
 // var divDateMain = document.createElement("div");
@@ -52,14 +51,13 @@ function createListItems(data, selected) {
 
 function printHolidays(data, i) {
   var countDownDate = new Date(data.date).getTime();
-  
+
   var x = setInterval(function () {
     // Get today's date and time
     var now = new Date().getTime();
 
     // Find the distance between now and the count down date
     var distance = countDownDate - now;
-   
 
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -86,51 +84,109 @@ function printHolidays(data, i) {
       document.querySelector("ol li:first-child").innerHTML =
         "Yay! Today's the day!";
     }
-    
-    
-    if(i == 0){
-    document.querySelector("ol li:first-child h3").innerHTML = "<center>" + days + " days | " +  hours +  " : " + minutes + " : " + seconds;
-     
-       
-    if (distance < 86400000) {
-        document.querySelector("ol li:first-child h3").innerHTML = hours +  " : " + minutes + " : " + seconds;
+
+    if (i == 0) {
+      document.querySelector("ol li:first-child h3").innerHTML =
+        "<center>" +
+        days +
+        " days | " +
+        hours +
+        " : " +
+        minutes +
+        " : " +
+        seconds;
+
+      if (distance < 86400000) {
+        document.querySelector("ol li:first-child h3").innerHTML =
+          hours + " : " + minutes + " : " + seconds;
       }
 
-      if(hours < 10) {
-        document.querySelector("ol li:first-child h3").innerHTML = "<center>" + days + " days | " + "0" + hours +  " : " + minutes + " : " + seconds;
+      if (hours < 10) {
+        document.querySelector("ol li:first-child h3").innerHTML =
+          "<center>" +
+          days +
+          " days | " +
+          "0" +
+          hours +
+          " : " +
+          minutes +
+          " : " +
+          seconds;
       }
 
-      if(minutes < 10) {
-        document.querySelector("ol li:first-child h3").innerHTML = "<center>" + days + " days | "  + hours +  " : " + "0" + minutes + " : " + seconds;
-      }
-      
-      if(seconds < 10) {
-        document.querySelector("ol li:first-child h3").innerHTML = "<center>" + days + " days | "  + hours +  " : " + minutes + " : " + "0" + seconds;
-      }
-
-      if(hours < 10 && seconds < 10) {
-        document.querySelector("ol li:first-child h3").innerHTML = "<center>" + days + " days | "  + "0" + hours +  " : " + minutes + " : " + "0" + seconds;
-      }
-
-      if(hours < 10 && minutes < 10) {
-        document.querySelector("ol li:first-child h3").innerHTML = "<center>" + days + " days | "  + "0" + hours +  " : " + "0" + minutes + " : " + seconds;
+      if (minutes < 10) {
+        document.querySelector("ol li:first-child h3").innerHTML =
+          "<center>" +
+          days +
+          " days | " +
+          hours +
+          " : " +
+          "0" +
+          minutes +
+          " : " +
+          seconds;
       }
 
-      if(minutes < 10 && seconds < 10) {
-        document.querySelector("ol li:first-child h3").innerHTML = "<center>" + days + " days | " + hours +  " : " + "0" + minutes + " : " + "0" + seconds;
+      if (seconds < 10) {
+        document.querySelector("ol li:first-child h3").innerHTML =
+          "<center>" +
+          days +
+          " days | " +
+          hours +
+          " : " +
+          minutes +
+          " : " +
+          "0" +
+          seconds;
       }
-       
+
+      if (hours < 10 && seconds < 10) {
+        document.querySelector("ol li:first-child h3").innerHTML =
+          "<center>" +
+          days +
+          " days | " +
+          "0" +
+          hours +
+          " : " +
+          minutes +
+          " : " +
+          "0" +
+          seconds;
+      }
+
+      if (hours < 10 && minutes < 10) {
+        document.querySelector("ol li:first-child h3").innerHTML =
+          "<center>" +
+          days +
+          " days | " +
+          "0" +
+          hours +
+          " : " +
+          "0" +
+          minutes +
+          " : " +
+          seconds;
+      }
+
+      if (minutes < 10 && seconds < 10) {
+        document.querySelector("ol li:first-child h3").innerHTML =
+          "<center>" +
+          days +
+          " days | " +
+          hours +
+          " : " +
+          "0" +
+          minutes +
+          " : " +
+          "0" +
+          seconds;
+      }
     }
-
   }, 1000);
 
-  
+  //document.querySelector("main ol li:first-child(" + `${data.id}` + ") h3").innerHTMl = days + "d" + hours + "h " + minutes + "m " + seconds + "s ";
 
-
-//document.querySelector("main ol li:first-child(" + `${data.id}` + ") h3").innerHTMl = days + "d" + hours + "h " + minutes + "m " + seconds + "s ";
- 
-  
-    //This will remove the outdated date and replace with new one
+  //This will remove the outdated date and replace with new one
   // if(day == -1) {}
   //if (day == 0 && hour == -23 && min == -59 && sec == -59)
   //{
@@ -140,7 +196,6 @@ function printHolidays(data, i) {
   document
     .querySelector("ol li:first-child")
     .setAttribute("class", "main__card");
-
 }
 
 function getHolidays() {
@@ -153,29 +208,29 @@ function getHolidays() {
         }
         createListItems(data[i], selected);
         printHolidays(data[i], i);
-        
+
         // Function call >>
       }
       favouritesActive();
     });
 }
 
-function expandHolidaysList() {
-    fetch("../data/holidays.json")
-    .then((response) => response.json())
-    .then((data) => {
-      for (let i = 0; i < data.length; i++) {
-        if (!localStorage.length == 0) {
-          var selected = localStorage.getItem("favourites").includes(i + 1);
-        }
-        createListItems(data[i], selected);
-        printHolidays(data[i], i);
-        
-        // Function call >>
-      }
-      favouritesActive();
-    });
-}
+// function expandHolidaysList() {
+//   fetch("../data/holidays.json")
+//     .then((response) => response.json())
+//     .then((data) => {
+//       for (let i = 0; i < data.length; i++) {
+//         if (!localStorage.length == 0) {
+//           var selected = localStorage.getItem("favourites").includes(i + 1);
+//         }
+//         createListItems(data[i], selected);
+//         printHolidays(data[i], i);
+
+//         // Function call >>
+//       }
+//       favouritesActive();
+//     });
+// }
 
 //creating localStorage
 function favouritesActive() {
@@ -219,5 +274,3 @@ function favouritesActive() {
     });
   });
 }
-
-
