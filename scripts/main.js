@@ -199,7 +199,7 @@ function printHolidays(data, i) {
 }
 
 function getHolidays() {
-  fetch("../data/holidays.json")
+  fetch("https://iseneld.github.io/data/holidays.json")
     .then((response) => response.json())
     .then((response) => {
       console.log(typeof response);
