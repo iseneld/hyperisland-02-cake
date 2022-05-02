@@ -198,16 +198,16 @@ function printHolidays(data, i) {
 }
 
 function getHolidays() {
-  fetch("https://elinahulbert.github.io/data/holidays.json")
+  fetch("../data/holidays.json")
     .then((response) => response.json())
-    .then((response) => {
-      console.log(response);
+    .then((data) => {
+      console.log(data, "response");
       for (let i = 0; i < 5; i++) {
         if (!localStorage.length == 0) {
           var selected = localStorage.getItem("favourites").includes(i + 1);
         }
-        createListItems(response[i], selected);
-        printHolidays(response[i], i);
+        createListItems(data[i], selected);
+        printHolidays(data[i], i);
 
         // Function call >>
       }
@@ -215,22 +215,22 @@ function getHolidays() {
     });
 }
 
-// function expandHolidaysList() {
-//   fetch("../data/holidays.json")
-//     .then((response) => response.json())
-//     .then((data) => {
-//       for (let i = 0; i < data.length; i++) {
-//         if (!localStorage.length == 0) {
-//           var selected = localStorage.getItem("favourites").includes(i + 1);
-//         }
-//         createListItems(data[i], selected);
-//         printHolidays(data[i], i);
+function expandHolidaysList() {
+  fetch("../data/holidays.json")
+    .then((response) => response.json())
+    .then((data) => {
+      for (let i = 0; i < data.length; i++) {
+        if (!localStorage.length == 0) {
+          var selected = localStorage.getItem("favourites").includes(i + 1);
+        }
+        createListItems(data[i], selected);
+        printHolidays(data[i], i);
 
-//         // Function call >>
-//       }
-//       favouritesActive();
-//     });
-// }
+        // Function call >>
+      }
+      favouritesActive();
+    });
+}
 
 //creating localStorage
 function favouritesActive() {
