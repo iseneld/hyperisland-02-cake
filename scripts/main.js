@@ -77,7 +77,6 @@ function printHolidays(data, i) {
         "main ol li:nth-child(" + `${data.id}` + ") h3"
       ).innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
     }
-
     // If the count down is finished, write some text
     if (distance < 0) {
       clearInterval(x);
